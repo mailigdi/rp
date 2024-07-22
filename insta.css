@@ -1,0 +1,71 @@
+.story-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    overflow-x: auto;
+    margin-bottom: 10px;
+}
+
+.story {
+    flex: 0 0 auto;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.story img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+ border: 4px solid; /* Bordure solide */
+background: var(--instac);
+    -webkit-background-clip: text; /* Utilisé pour appliquer le dégradé sur la bordure */
+    background-clip: text; /* Utilisé pour appliquer le dégradé sur la bordure */
+}
+
+.story-viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.story-viewer.active {
+    display: flex;
+}
+
+.story-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+}
+
+.story-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.story-content img {
+    width: 100%;
+    max-height: 80vh; /* Ajuste la hauteur maximale de l'image pour qu'elle ne dépasse pas l'écran */
+    object-fit: contain; /* Permet à l'image de conserver son ratio */
+}
+
+.story-caption {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff;
+}
